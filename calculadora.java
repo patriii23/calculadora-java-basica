@@ -12,12 +12,13 @@ public class CalculadoraBasica {
             System.out.println("2. Resta");
             System.out.println("3. Multiplicación");
             System.out.println("4. División");
-            System.out.println("5. Salir");
+            System.out.println("5. Modulo");
+            System.out.println("6. Salir");
             System.out.print("Elige una opción: ");
 
             int opcion = scanner.nextInt();
 
-            if (opcion >= 1 && opcion <= 4) {
+            if (opcion >= 1 && opcion <= 5) {
                 System.out.print("Ingresa el primer número: ");
                 double num1 = scanner.nextDouble();
                 System.out.print("Ingresa el segundo número: ");
@@ -40,6 +41,13 @@ public class CalculadoraBasica {
                             System.out.println("Error: No se puede dividir entre cero.");
                         }
                         break;
+                    case 5:
+                        if (num2 != 0){
+                            System.out.println("El resultado es: " + Modulo(num2, num2));
+                        } else {
+                            System.out.println("El divisor no puede ser cero");
+                        }
+                        break;
                 }
             } else if (opcion == 5) {
                 continuar = false;
@@ -56,4 +64,5 @@ public class CalculadoraBasica {
     public static double restar(double a, double b) { return a - b; }
     public static double multiplicar(double a, double b) { return a * b; }
     public static double dividir(double a, double b) { return a / b; }
+    public static double Modulo(double a, double b) {return a % b;}
 }
