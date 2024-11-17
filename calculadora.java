@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CalculadoraBasica {
+public class calculadora {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -57,3 +57,5 @@ public class CalculadoraBasica {
     public static double multiplicar(double a, double b) { return a * b; }
     public static double dividir(double a, double b) { return a / b; }
 }
+
+/*commit uno, revision de codigo*/
